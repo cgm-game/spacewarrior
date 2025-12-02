@@ -6,6 +6,7 @@
 #include <raylib.h>
 #include <iostream>
 #include <raygui.h>
+#include <resource_dir.h>
 
 void loadResources(bool* isDataLoaded) {
     std::cout << "Loading Resources..." << std::endl;
@@ -13,6 +14,8 @@ void loadResources(bool* isDataLoaded) {
     InitAudioDevice();
 
     //Load Resources
+    SearchAndSetResourceDir("spacewarrior");
+
     GuiLoadStyle("assets/style_cyber.rgs");
 
     resources.ship = LoadTexture("assets/ship.png");

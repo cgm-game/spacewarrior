@@ -12,6 +12,7 @@
 #include <raygui.h>
 #include <vector>
 #include <string>
+#include <algorithm>
 
 
 struct resources resources;
