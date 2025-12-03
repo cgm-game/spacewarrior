@@ -60,8 +60,10 @@ void AboutPage() {
     GuiLabel((Rectangle){100, 400, 400, 60}, "Made By");
 
     GuiSetStyle(DEFAULT, TEXT_SIZE, defsize);
-    GuiLabel((Rectangle){100, 400, (float)GetScreenWidth() - 200, 200}, "Gyan Prakash\ngyanprakash2483@gmail.com\nv-1.6.0 - release");
-
+    GuiLabel((Rectangle){100, 400, (float)GetScreenWidth() - 200, 200}, "Gyan Prakash (2023ug1091)\ngyan.2023ug1091@iiitranchi.ac.in\n");
+    GuiLabel((Rectangle){100, 450, (float)GetScreenWidth() - 200, 200}, "Shubham Kumar (2023ug1090)\nshubham.2023ug1090@iiitranchi.ac.in\n");
+    GuiLabel((Rectangle){100, 500, (float)GetScreenWidth() - 200, 200}, "Shubham Singh (2023ug1099)\nshubham.2023ug1099@iiitranchi.ac.in\n");
+    GuiLabel((Rectangle){100, 550, (float)GetScreenWidth() - 200, 200}, "Kasturi Marandi (2023ug1114)\nkasturi.2023ug1114@iiitranchi.ac.in\n");
     if(IsKeyPressed(KEY_ESCAPE)) {
         displayScreen(&MainMenu);
     }
