@@ -19,6 +19,10 @@ struct resources {
     Sound gunfire;
     Sound gameover;
     Sound game_music;
+    Texture2D thrust1;
+    Texture2D thrust2;
+    Texture2D thrust3;
+    Sound engine;
 };
 
 extern struct resources resources;

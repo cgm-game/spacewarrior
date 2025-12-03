@@ -25,6 +25,10 @@ Camera2D camera = {
 
 int mouse_lockX;
 
+unsigned long thrust_image_number = 0;
+unsigned long thrust_animation_change_frequency = 7;
+unsigned long thrust_animation_change_counter = 0;
+
 void MainGameDisplay() {
 
     int left = gamestate.player_pos.x - 10 * GetScreenWidth();
@@ -66,6 +70,18 @@ void MainGameDisplay() {
         DrawTexturePro(resources.enemy_bullets, {0, 0, 251, 114}, {enemy_bullet.pos.x, enemy_bullet.pos.y, 62.25, 28.5}, {31.125, 14.25}, enemy_bullet.rotation, WHITE);
     }
 
+    // Draw thrust effect
+    if(IsKeyDown(KEY_W)) {
+        if(thrust_image_number % 3 == 0) DrawTexturePro(resources.thrust1, {0, 0, 1024, 1024}, {gamestate.player_pos.x, gamestate.player_pos.y, 128, 128}, {64, 0}, -camera.rotation, WHITE);
+        if(thrust_image_number % 3 == 1) DrawTexturePro(resources.thrust2, {0, 0, 1024, 1024}, {gamestate.player_pos.x, gamestate.player_pos.y, 128, 128}, {64, 0}, -camera.rotation, WHITE);
+        if(thrust_image_number % 3 == 2) DrawTexturePro(resources.thrust3, {0, 0, 1024, 1024}, {gamestate.player_pos.x, gamestate.player_pos.y, 128, 128}, {64, 0}, -camera.rotation, WHITE);
+        thrust_animation_change_counter++;
+        if(thrust_animation_change_counter >= thrust_animation_change_frequency) {
+            thrust_image_number++;
+            thrust_animation_change_counter = 0;
+        }
+    }
+
     // Draw player's ship
     DrawTexturePro(resources.ship, {0, 0, 112, 88}, {gamestate.player_pos.x, gamestate.player_pos.y, 112, 88}, {56, 44}, -camera.rotation, WHITE);
 
@@ -100,7 +116,14 @@ void MainGameProcess() {
     if(IsKeyDown(KEY_W)) {
         gamestate.player_speed.y -= cos(camera.rotation * PI / 180.0f) / 25;
         gamestate.player_speed.x -= sin(camera.rotation * PI / 180.0f) / 25;
+        
+        if(!IsSoundPlaying(resources.engine)) {
+            PlaySound(resources.engine);
+        }
+    } else if(IsSoundPlaying(resources.engine)) {
+        StopSound(resources.engine);
     }
+
     if(IsKeyDown(KEY_S)) {
         gamestate.player_speed.y += cos(camera.rotation * PI / 180.0f) / 50;
         gamestate.player_speed.x += sin(camera.rotation * PI / 180.0f) / 50;
