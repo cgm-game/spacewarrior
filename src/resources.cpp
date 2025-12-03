@@ -29,6 +29,12 @@ void loadResources(bool* isDataLoaded) {
     resources.gameover = LoadSound("assets/game_over.wav");
     resources.game_music = LoadSound("assets/game_music.mp3");
 
+    resources.thrust1 = LoadTexture("assets/thrust1.png");
+    resources.thrust2 = LoadTexture("assets/thrust2.png");
+    resources.thrust3 = LoadTexture("assets/thrust3.png");
+
+    resources.engine = LoadSound("assets/engine.mp3");
+
     *isDataLoaded = true;
 }
 
