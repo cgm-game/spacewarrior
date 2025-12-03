@@ -30,36 +30,43 @@ cd spacewarrior
 
 Make sure the following are installed on your system:
 
-- C/C++ compiler
-- gcc / g++ (Windows MinGW, Linux, macOS)
-- or clang
+- C/C++ compiler - GNU GCC, MinGW(web64devkit) or clang
 - raylib library
-- CMake (optional but recommended)
-- Make / Ninja (optional)
+- Make
 
-## Windows (MSYS2 MinGW)
-```sh
-pacman -S mingw-w64-x86_64-raylib
-```
+## Compile & Run
 
-## Linux (Ubuntu/Debian)
-```sh
-sudo apt install libraylib-dev
-```
-## macOS (Homebrew)
-```sh
-brew install raylib
-```
+- Open project in vscode
+- Open any source file (`.cpp`)
+- Click Run C/C++ File
+- Select "Run preLaunchTask: build release"
 
+The build script will automatically install raylib if not already installed.
 
 ## 🎮 Controls
 - Move - press W key
 - shoot - click mouse button
 - Quit Game - ESC
 
+## 🗂️ Project Structure
+
+Below is a visual representation of the repository structure.
+
+![Project Structure](docs/images/project_structure.png)
+
+## 🖼️ Screenshots
+
+Some in-game screenshots and UI previews from `docs/images/`:
+
+![Home Screen](docs/images/home_screen.png)
+
+![Gameplay 1](docs/images/gameplay1.png)
+
+![Gameplay 2](docs/images/gameplay2.png)
 
 ## Contributors✨
-**Gyan Prakash (2023ug1091)**  
+
+ **Gyan Prakash (2023ug1091)**  
  gyan.2023ug1091@iiitranchi.ac.in
 
  **Shubham Kumar (2023ug1090)**  
@@ -68,14 +75,6 @@ brew install raylib
  **Shubham Singh (2023ug1099)**  
  shubham.2023ug1099@iiitranchi.ac.in 
 
-**Kasturi Marandi (2023ug1114)**  
+ **Kasturi Marandi (2023ug1114)**  
  kasturi.2023ug1114@iiitranchi.ac.in  
-
- 
-
-
-
-  
-
-
 
