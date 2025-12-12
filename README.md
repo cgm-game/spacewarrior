@@ -72,8 +72,8 @@ Some in-game screenshots and UI previews from `docs/images/`:
  **Shubham Kumar (2023ug1090)**  
  shubham.2023ug1090@iiitranchi.ac.in  
 
- **Shubham Singh (2023ug1099)**  
- shubham.2023ug1099@iiitranchi.ac.in 
+ **Shubham Singh (2023UG1099)**  
+ shubham.2023UG1099@iiitranchi.ac.in 
 
  **Kasturi Marandi (2023ug1114)**  
  kasturi.2023ug1114@iiitranchi.ac.in  
